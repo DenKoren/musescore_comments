@@ -1,8 +1,7 @@
 import QtQuick 2.9
-import QtQuick.Controls 1.5
+import QtQuick.Controls 2
 import QtQuick.Window 2.2
 import MuseScore 3.0
-import Qt.labs.settings 1.0
 
 MuseScore {
     menuPath : "Plugins.Comments"
@@ -11,7 +10,6 @@ MuseScore {
     //SL Removed plugin type as it's not really a dialog anymore and is causing two windows to be present on MAC
     //pluginType : "Dialog"
     //requiresScore: true // needs MuseScore > 2.0.3
-
 
     onRun : {
         if (!curScore) {
@@ -73,7 +71,6 @@ MuseScore {
                   anchors.fill : parent
 
                   font.pointSize : 12
-                  backgroundVisible : false
                   focus : true
                   wrapMode : TextEdit.WrapAnywhere
                   textFormat : TextEdit.PlainText
